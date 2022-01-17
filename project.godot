@@ -1,0 +1,59 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "CL_Constants",
+"language": "GDScript",
+"path": "res://addons/ColorLink/Constants.gd"
+} ]
+_global_script_class_icons={
+"CL_Constants": ""
+}
+
+[addons]
+
+colorlink/palette={
+"dark": Color( 0.133333, 0.133333, 0.133333, 1 ),
+"dark-hover": Color( 0.145098, 0.145098, 0.145098, 1 ),
+"darkest": Color( 0.0901961, 0.0901961, 0.0901961, 1 ),
+"light": Color( 0.266667, 0.266667, 0.266667, 1 ),
+"lightest": Color( 0.827451, 0.827451, 0.827451, 1 ),
+"primary": Color( 0.854902, 0, 0.215686, 1 )
+}
+
+[application]
+
+config/name="Growser"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+LinkedColorizer="*res://addons/ColorLink/LinkedColorizer.gd"
+BrowserState="*res://Web/Scripts/Browser/BrowserState.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/ColorLink/plugin.cfg" )
+
+[network]
+
+limits/debugger_stdout/max_chars_per_second=65536
+limits/debugger_stdout/max_messages_per_frame=655360
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_clear_color=Color( 0.0901961, 0.0901961, 0.0901961, 1 )
+environment/default_environment="res://default_env.tres"
