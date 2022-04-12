@@ -4,8 +4,4 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-gdnative = "0.9.*"
-html5ever = "0.25.*"
-
-[lib]
-crate-type = ["cdylib"]
+growser_dom = { path = "../crates/dom" }
